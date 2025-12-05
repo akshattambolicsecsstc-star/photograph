@@ -1,16 +1,18 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -20,7 +22,7 @@ export default function Contact() {
     e.preventDefault();
     // Simulate form submission
     setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -31,13 +33,17 @@ export default function Contact() {
           Get In Touch
         </h2>
         <p className="text-center text-muted-foreground mb-12 text-lg">
-          Have a project in mind? Let's discuss how we can create something amazing together.
+          Have a project in mind? Let's discuss how we can create something
+          amazing together.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Input */}
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold mb-3 text-foreground">
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold mb-3 text-foreground"
+            >
               Name
             </label>
             <input
@@ -54,7 +60,10 @@ export default function Contact() {
 
           {/* Email Input */}
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold mb-3 text-foreground">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold mb-3 text-foreground"
+            >
               Email
             </label>
             <input
@@ -71,7 +80,10 @@ export default function Contact() {
 
           {/* Message Input */}
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold mb-3 text-foreground">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold mb-3 text-foreground"
+            >
               Message
             </label>
             <textarea
@@ -97,7 +109,8 @@ export default function Contact() {
           {/* Success Message */}
           {isSubmitted && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center font-medium">
-              Thank you! Your message has been sent successfully. I'll be in touch soon!
+              Thank you! Your message has been sent successfully. I'll be in
+              touch soon!
             </div>
           )}
         </form>

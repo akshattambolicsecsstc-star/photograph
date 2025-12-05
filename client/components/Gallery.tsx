@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = Array.from({ length: 9 }, (_, i) => ({
   id: i + 1,
@@ -41,19 +41,33 @@ export default function Gallery() {
               <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gray-400 rounded-lg flex items-center justify-center">
-                    <svg className="w-8 h-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-8 h-8 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" />
                     </svg>
                   </div>
-                  <p className="text-gray-600 text-sm font-medium">{image.title}</p>
+                  <p className="text-gray-600 text-sm font-medium">
+                    {image.title}
+                  </p>
                 </div>
               </div>
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                  <svg
+                    className="w-12 h-12 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </div>
               </div>
@@ -82,11 +96,17 @@ export default function Gallery() {
             <div className="aspect-square w-full bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <div className="w-24 h-24 mx-auto mb-6 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg
+                    className="w-12 h-12 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" />
                   </svg>
                 </div>
-                <p className="text-gray-300 text-lg font-medium">Photography {selectedImage}</p>
+                <p className="text-gray-300 text-lg font-medium">
+                  Photography {selectedImage}
+                </p>
               </div>
             </div>
           </div>

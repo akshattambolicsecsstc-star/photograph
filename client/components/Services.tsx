@@ -2,25 +2,29 @@ const services = [
   {
     id: 1,
     title: "Weddings",
-    description: "Capture the most important moments of your special day with artistic vision and technical excellence. From ceremony to celebration, every emotion preserved beautifully.",
+    description:
+      "Capture the most important moments of your special day with artistic vision and technical excellence. From ceremony to celebration, every emotion preserved beautifully.",
     icon: "💍",
   },
   {
     id: 2,
     title: "Portraits",
-    description: "Professional portrait photography that reveals personality and character. Perfect for personal branding, families, or artistic expression with timeless elegance.",
+    description:
+      "Professional portrait photography that reveals personality and character. Perfect for personal branding, families, or artistic expression with timeless elegance.",
     icon: "👤",
   },
   {
     id: 3,
     title: "Product Shoots",
-    description: "Showcase your products with stunning photography that highlights features and quality. Ideal for e-commerce, marketing, and promotional campaigns.",
+    description:
+      "Showcase your products with stunning photography that highlights features and quality. Ideal for e-commerce, marketing, and promotional campaigns.",
     icon: "📦",
   },
   {
     id: 4,
     title: "Commercial",
-    description: "Professional commercial photography for brands and businesses. From corporate events to brand storytelling, creating visual content that resonates.",
+    description:
+      "Professional commercial photography for brands and businesses. From corporate events to brand storytelling, creating visual content that resonates.",
     icon: "🎬",
   },
 ];
@@ -61,8 +65,18 @@ export default function Services() {
               {/* Arrow Indicator */}
               <div className="mt-6 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
                 <span className="font-medium">Learn more</span>
-                <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4 transform group-hover:translate-x-2 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </div>
             </div>

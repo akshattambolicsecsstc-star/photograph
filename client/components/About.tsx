@@ -9,11 +9,21 @@ export default function About() {
               <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto bg-gray-400 rounded-full flex items-center justify-center mb-4">
-                    <svg className="w-16 h-16 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    <svg
+                      className="w-16 h-16 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </div>
-                  <p className="text-gray-600 font-medium">Portrait Placeholder</p>
+                  <p className="text-gray-600 font-medium">
+                    Portrait Placeholder
+                  </p>
                 </div>
               </div>
             </div>
@@ -25,13 +35,21 @@ export default function About() {
               About Me
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate photographer dedicated to capturing moments that tell stories. With a keen eye for composition and light, I specialize in creating images that resonate emotionally with viewers.
+              I'm a passionate photographer dedicated to capturing moments that
+              tell stories. With a keen eye for composition and light, I
+              specialize in creating images that resonate emotionally with
+              viewers.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              My approach combines technical expertise with artistic vision. I believe photography is about more than just taking pictures—it's about preserving emotions, memories, and the beauty of human connection.
+              My approach combines technical expertise with artistic vision. I
+              believe photography is about more than just taking pictures—it's
+              about preserving emotions, memories, and the beauty of human
+              connection.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Whether it's weddings, portraits, or commercial work, I bring professionalism, creativity, and dedication to every project. Let's create something beautiful together.
+              Whether it's weddings, portraits, or commercial work, I bring
+              professionalism, creativity, and dedication to every project.
+              Let's create something beautiful together.
             </p>
             <button className="px-10 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
               Get In Touch
