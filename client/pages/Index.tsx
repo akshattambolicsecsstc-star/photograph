@@ -1,62 +1,71 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import Hero from '@/components/Hero';
+import Gallery from '@/components/Gallery';
+import About from '@/components/About';
+import Services from '@/components/Services';
+import Contact from '@/components/Contact';
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
-    </div>
+    <main className="w-full">
+      <Hero />
+      <Gallery />
+      <About />
+      <Services />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-12 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            {/* Brand */}
+            <div>
+              <h3 className="text-xl font-bold mb-2">Photography</h3>
+              <p className="text-sm text-primary-foreground/80">
+                Capturing moments that matter
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#gallery" className="hover:text-accent transition-colors">Gallery</a></li>
+                <li><a href="#about" className="hover:text-accent transition-colors">About</a></li>
+                <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-accent transition-colors">Weddings</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Portraits</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Product Shoots</a></li>
+              </ul>
+            </div>
+
+            {/* Social */}
+            <div>
+              <h4 className="font-semibold mb-4">Follow</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-accent transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">Facebook</a></li>
+                <li><a href="#" className="hover:text-accent transition-colors">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/70">
+            <p>&copy; 2024 Your Photography. All rights reserved.</p>
+            <div className="flex gap-6 mt-4 md:mt-0">
+              <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
