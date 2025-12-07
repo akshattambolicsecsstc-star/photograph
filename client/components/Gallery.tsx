@@ -1,4 +1,4 @@
-import { useState } from "react";
+p[o]import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = Array.from({ length: 9 }, (_, i) => ({
